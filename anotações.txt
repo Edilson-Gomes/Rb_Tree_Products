@@ -1,0 +1,17 @@
+RBTree
+10000 produtos registrados.
+Produtos abaixo de R$100,00: 4770
+Produtos acima de R$100,00: 5230
+Tempo de busca: 0.0165 segundos
+
+AVLTree
+10000 produtos registrados.
+Produtos abaixo de R$100,00: 4748
+Produtos acima de R$100,00: 5252
+Tempo de busca: 0.0122 segundos
+
+SortedDict
+10000 produtos registrados.
+Produtos abaixo de R$100,00: 4773
+Produtos acima de R$100,00: 5227
+Tempo de busca: 0.0062 segundos
