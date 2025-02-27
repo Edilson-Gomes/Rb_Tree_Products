@@ -11,6 +11,8 @@ Dentro da classe, o método **insert()** adiciona um produto à árvore. Como os
 
 Depois, temos dois métodos para buscar produtos: um para recuperar os que estão abaixo de um determinado valor **get_products_below()** e outro para os que estão acima **get_products_above()**. Ambos percorrem a árvore e filtram os preços conforme o critério solicitado.  
 
-No trecho principal do código, são gerados 10.000 produtos com preços aleatórios entre R$10,00 e R$200,00, que são inseridos na árvore. Em seguida, são feitas as buscas para separar os produtos abaixo e acima de R$100,00, e o tempo gasto nessa operação é medido. No final, o código exibe quantos produtos caíram em cada categoria e o tempo que levou para buscar essas informações.  
+No trecho principal do código, são gerados 10.000 produtos com preços aleatórios entre R$10,00 e R$200,00, que são inseridos na árvore. Em seguida, são feitas as buscas para separar os produtos abaixo e acima de R$100,00, e o tempo gasto nessa operação é medido. No final, o código exibe quantos produtos caíram em cada categoria e o tempo que levou para buscar essas informações, o arquivo **resultados.txt** exibi as comparações de busca de árvore.  
 
-A grande sacada da árvore rubro-negra aqui é manter os preços ordenados sem precisar de uma estrutura auxiliar ou de uma ordenação manual. Como essa árvore é balanceada automaticamente, todas as operações de inserção e busca são feitas em tempo O(log n), ou seja, mesmo com milhares de produtos, a performance continua boa. Isso faz dela uma excelente escolha para armazenar e recuperar dados ordenados de maneira eficiente, o que pode ser útil em sistemas como catálogos de produtos, estoques e até em bancos de dados internos.  
+### Arquivos
+* [ProductRBTree.py](./ProductRBTree.py)  
+* [resultados.txt](./resultados.txt)  
