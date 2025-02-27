@@ -1,13 +1,16 @@
-# Rb_Tree_Products
-### Projeto implementação arvore rubro negra.  
-Utilize a estrutura de dados árvore binária para resolver um problema real. Pode ser feito em qualquer linguagem. Utilize uma que tenha a implementação de arvore rubro negra. (*TreeMap no Java, por exemplo*).
+# Estrutura de dados não lineares
 
-**Sugestão:** Crie uma aplicação que armazene produtos com descrição e valor em uma estrutura de arvore rubro negra. 
+*Edilson Gomes*
 
-Gere subgrupos de produtos com preço abaixo de R$100,00 e outro com preços acima de R$100,00.
+## Rb_Tree_Products
 
-Simule uma quantidade de pelo menos 10 mil produtos.
 
-## Rb_Tree_Products  
-Obtei escolher a linguagem Python, que sou mais familharizado, utilizando a biblioteca **bintrees**, que é uma biblioteca de python direcionada para arvores binárias especialmente AVL e RB, com **bintrees** invoco **RBTree**, que é a árvore pedido no projeto, e a **AVLTree** para poder comparar o tempo de buscar entre as duas. Também importei a biblioteca **SortedContainers**, que também tem arvores binárias, nela invoco a **SortedDict** (que representa uma árvore binária aproximada da rubro-negra, mas com uma otimização melhorada) também para poder comparar o tempo de buscar com a **RBTree**. Utilizo também as bibliotecas **time**(para usar os metodos de contagem de tempo) e **random**(para poder registrar os produtos com valores aleatórios. Segue o link para acessar o código: [ProductRBTree.py](ProductRBTree.py).
-No arquivo de [anotações.txt](anotações.txt) informa o tempo gasto de cada árvore binária usada com as mesmas quantidades de produtos registrados.
+A implementação é feita com **Python** e começa importando algumas *bibliotecas*, como **random** (para gerar preços aleatórios) e **time** (para medir o tempo das buscas). A estrutura de dados principal é encapsulada na classe **ProductRBTree**, que utiliza a **RBTree** da biblioteca **bintrees**. Existem outras opções comentadas no código, como **AVLTree** e **SortedDict**, que são variações de árvores balanceadas, vão ser usadas separadamente para poder comparar o tempo usado na busca.  
+
+Dentro da classe, o método **insert()** adiciona um produto à árvore. Como os preços são as chaves, se houver mais de um produto com o mesmo preço, as descrições são armazenadas em uma lista dentro da chave correspondente. Isso permite que produtos com valores idênticos não se sobrescrevam.  
+
+Depois, temos dois métodos para buscar produtos: um para recuperar os que estão abaixo de um determinado valor **get_products_below()** e outro para os que estão acima **get_products_above()**. Ambos percorrem a árvore e filtram os preços conforme o critério solicitado.  
+
+No trecho principal do código, são gerados 10.000 produtos com preços aleatórios entre R$10,00 e R$200,00, que são inseridos na árvore. Em seguida, são feitas as buscas para separar os produtos abaixo e acima de R$100,00, e o tempo gasto nessa operação é medido. No final, o código exibe quantos produtos caíram em cada categoria e o tempo que levou para buscar essas informações.  
+
+A grande sacada da árvore rubro-negra aqui é manter os preços ordenados sem precisar de uma estrutura auxiliar ou de uma ordenação manual. Como essa árvore é balanceada automaticamente, todas as operações de inserção e busca são feitas em tempo O(log n), ou seja, mesmo com milhares de produtos, a performance continua boa. Isso faz dela uma excelente escolha para armazenar e recuperar dados ordenados de maneira eficiente, o que pode ser útil em sistemas como catálogos de produtos, estoques e até em bancos de dados internos.  
