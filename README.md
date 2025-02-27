@@ -16,3 +16,5 @@ No trecho principal do código, são gerados 10.000 produtos com preços aleató
 ### Arquivos
 * [ProductRBTree.py](./ProductRBTree.py)  
 * [resultados.txt](./resultados.txt)  
+* [bintrees código-fonte](https://github.com/mozman/bintrees?tab=readme-ov-file)  
+A biblioteca **bintrees** foi descontinuada, mas podemos análisar sua documentação nesse [link](https://pypi.org/project/bintrees/).
